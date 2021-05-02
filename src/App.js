@@ -20,10 +20,14 @@ useEffect(() => {
   .catch(err => console.log(err))
 },[])
 
+console.log(charData)
 
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      <div>{charData.map(char =>{return (
+        <Character data = {char}/>)
+        })}</div>
     </div>
   );
 }
